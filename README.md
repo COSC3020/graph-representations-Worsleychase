@@ -19,3 +19,17 @@ most important part. Add your answer to this markdown file.
 
 Implement a function to convert an adjacency list to an adjacency matrix and
 analyze it as above.
+
+# Solution
+
+For converting a matrix to a list, I used a nested for loop. Both for loops iterate over the entire length of the array and the subarrays. These are both linear operations, so we have a complexity of $O(n\cdot n) = O(n^2)$. I also use push but that is a constant O(1), so it is negligible. This complexity only depends on the number of verticies, because we iterate over each possible edge even if its empty/null.
+
+# Bonus Solution
+
+Similar to the matrix to list, my implementation of a list to matrix converter uses a nested for loop. Both loops iterate over the entire length of the array and the subarrays. Both are linear, meaning we get $O(n^2)$. Iterating over the list takes O(n+m) where n is the # of verticies and m is the # of edges. That means our total runtime turns into $O(n^2+n+m)$, which simplifies to $O(n^2)$. The non-simplified version does depend on edges as well as verticies. If the graph is sparse, the complexity would be especially dependent on edges. But asymptotically it only really depends on the number of verticies.
+
+# Disclaimer
+
+I watched [this](https://www.youtube.com/watch?v=EQsZJCsNOSc) for better understanding the adjacency lists and matricies.
+
+I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
